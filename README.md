@@ -1,15 +1,34 @@
-## Programmer Assessment Q4
+---
 
-This repository contains a broken web app built with Dash. Please follow the tasks below.
+## Quickstart
 
-Tasks:
-1. Clone this repo to your machine.
-2. Fix missing dependencies and fill authors section in `pyproject.toml`.
-3. Fix bugs prevent the app `main.py` from running.
-4. Change port the app ruuning on to `10030`.
-5. Commit you changes.
-6. Update `README.md` with a instruction
-   1. Assuming the user has a fresh minimum Linux installation with no python.
-   2. Setup python and virtual environment for this app, remember to use the fixed `pyproject.toml`.
-   3. How to run this app and how to access it without portforwarding.
-7. Push all the changes to your own repository on Github, and provide a link to your own repo in your submission in the last.
+# Steps to run the assessment
+
+### 1) Install Python, venv, and Git
+```
+sudo apt-get update -y
+sudo apt-get install -y python3.11 python3.11-venv git
+python3.11 --version
+```
+### Clone your fork and create a virtual environment
+```
+git clone https://github.com/MChikani/Assessment-debugging.git
+cd Assessment-debugging
+```
+### Create and activate venv
+```
+python3.11 -m venv .venv
+source .venv/bin/activate
+```
+### Install dependencies
+```
+python -m pip install --upgrade pip
+python -m pip install .
+```
+### Run the app first
+```
+python main.py
+```
+### Then access it through the browser
+```
+http://127.0.0.1:10030
