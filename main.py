@@ -1,5 +1,6 @@
 import dash
-from dash import dcc, html, Input, Output, ClientsideFunction
+from dash import dcc, html, Input, Output
+from dash.dependencies import ClientsideFunction
 import numpy as np
 import pandas as pd
 import datetime
@@ -553,7 +554,7 @@ app.layout = html.Div(
                     children=[
                         html.B("Patient Wait Time and Satisfactory Scores"),
                         html.Hr(),
-                        html.Div(id="wait_time_tabel", children=initialize_table()),
+                        html.Div(id="wait_time_table", children=initialize_table()),
                     ],
                 ),
             ],
@@ -709,4 +710,4 @@ def update_table(start, end, clinic, admit_type, heatmap_click, reset_click, *ar
 
 # Run the server
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(host="0.0.0.0", port=10030, debug=True)
