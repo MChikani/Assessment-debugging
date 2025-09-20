@@ -661,13 +661,13 @@ def update_table(start, end, clinic, admit_type, heatmap_click, reset_click, *ar
 
         for department in departments:
             department_wait_time_figure = create_table_figure(
-                department, filtered_df, "Wait Time Min", wait_time_xrange, ""
+                department, filtered_df, "Wait Time Min", wait_time_xrange, []
             )
             figure_list.append(department_wait_time_figure)
 
         for department in departments:
             department_score_figure = create_table_figure(
-                department, filtered_df, "Care Score", score_xrange, ""
+                department, filtered_df, "Care Score", score_xrange, []
             )
             figure_list.append(department_score_figure)
 
